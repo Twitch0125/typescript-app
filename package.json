@@ -1,0 +1,16 @@
+{
+  "name": "typescript-stuff",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^12.6.2",
+    "chance": "^1.0.18"
+  }
+}
