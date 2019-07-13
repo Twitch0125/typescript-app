@@ -1,12 +1,10 @@
-"use strict";
-exports.__esModule = true;
 var Chance = require("chance");
 var chance = new Chance();
 var Dwelling;
 (function (Dwelling) {
-    Dwelling["Rambler"] = "Rambler";
-    Dwelling["TwoStory"] = "Two-Story";
-    Dwelling["Duplex"] = "Duplex";
+    Dwelling[Dwelling["Rambler"] = 0] = "Rambler";
+    Dwelling[Dwelling["TwoStory"] = 1] = "TwoStory";
+    Dwelling[Dwelling["Duplex"] = 2] = "Duplex";
 })(Dwelling || (Dwelling = {}));
 var houses = createHouses(10);
 function getAllHouses() {
@@ -30,12 +28,14 @@ function getHousesByTypeOfDwelling(dwelling) {
 function logHouseAddresses() {
     var houses = [];
     for (var _i = 0; _i < arguments.length; _i++) {
-        houses[_i] = arguments[_i];
+        houses[_i - 0] = arguments[_i];
     }
     houses.forEach(function (house) {
         console.log("address: " + house.address);
     });
 }
+// let logHouseAddresses = (...houses: any[]) => (houses.forEach(house=> console.log(house.address)
+// ))
 function createHouses(amt) {
     var HOUSES = [];
     for (var i = 0; i < amt; i++) {
